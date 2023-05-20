@@ -1,7 +1,7 @@
 import yaml
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
-from sklearn.cluster import DBSCAN
+from sklearn.cluster import DBSCAN, AgglomerativeClustering
 from sklearn.metrics import silhouette_score, davies_bouldin_score
 
 from utils.column_processing_category import get_category
@@ -31,10 +31,17 @@ def encode_categorical_attributes(data, categorical_columns):
     return encoded_data
 
 
-def perform_clustering(data, eps, min_samples):
-    dbscan = DBSCAN(eps=eps,
-                    min_samples=min_samples)
-    cluster_labels = dbscan.fit_predict(data)
+def perform_clustering(data, config):
+    if config["cluster_method"] == "AgglomerativeClustering":
+        Aggl = AgglomerativeClustering(n_clusters=config['n_clusters'])
+        cluster_labels = Aggl.fit_predict(data)
+    elif config["cluster_method"] == "DBSCAN":
+        dbscan = DBSCAN(eps=config["eps"],
+                        min_samples=config["min_samples"])
+        cluster_labels = dbscan.fit_predict(data)
+    else:
+        print("Unknow cluster method")
+        exit(1)
     return cluster_labels
 
 
@@ -57,8 +64,7 @@ def main(config):
     processed_data = pd.concat([encoded_data, numerical_data], axis=1)
 
     cluster_labels = perform_clustering(processed_data,
-                                        config['eps'],
-                                        config['min_samples'])
+                                        config)
 
     save_cluster_labels(data, cluster_labels, config['output_file'])
     silhouette = silhouette_score(processed_data, cluster_labels)
