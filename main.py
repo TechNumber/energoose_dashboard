@@ -8,8 +8,9 @@ from utils.column_processing_category import get_category
 from utils.gusev_processing_category import gusev_get_category
 from utils.merge_tables import merge_scores
 from utils.processing_interval_groups import get_interval_groups
+from utils.processing_workplaces import save_processed_workplace
 
-CONFIG_PATH = "/Users/karenkocharyan/PycharmProjects/energoose_dashboard/configs/cluster_config.yaml"
+CONFIG_PATH = "/home/technum/coding/pycharm/energoose_dashboard/configs/cluster_config.yaml"
 
 
 def load_data(file_path):
@@ -18,6 +19,7 @@ def load_data(file_path):
 
 
 def get_processed_data(data, config):
+    save_processed_workplace(data, config['workplace_output'])
     data = get_category(data)
     data = gusev_get_category(data)
     data = merge_scores(data, config['path_to_csv_files'])
