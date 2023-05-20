@@ -1,10 +1,12 @@
 # Data preprocessing
 input_file: "/Users/PycharmProjects/energoose_dashboard/data/Участники anonimized.csv"
+path_to_csv_files: "/Users/PycharmProjects/energoose_dashboard/data/anonimized"
 categorical_columns:
 - "EX-Категория"
 numeric_columns:
 - "Пол"
 output_file: "/Users/PycharmProjects/energoose_dashboard/clustered_data/clustered.csv"
+
 
 # Cluster params
 ## DBSCAN
