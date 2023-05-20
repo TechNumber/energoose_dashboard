@@ -1,26 +1,25 @@
 # Data preprocessing
-input_file: "/Users/PycharmProjects/energoose_dashboard/data/Участники anonimized.csv"
-path_to_csv_files: "/Users/PycharmProjects/energoose_dashboard/data/anonimized"
+input_file: "data/Участники anonimized.csv"
+path_to_csv_files: "data/anonimized"
 categorical_columns:
 - "EX-Категория"
-- "Группировка по опыту работы"
-- "Группировка по опыту в Росатоме"
-- "Группировка по возрасту"
-- "Группировка по баллам"
 numeric_columns:
-- "Пол"
-#- "Возраст"
-#- "Стаж работы Росатом"
-#- "опыт работы"
-#- "Баллы, %"
-output_file: "/Users/PycharmProjects/energoose_dashboard/clustered_data/clustered.csv"
-cluster_method: "AgglomerativeClustering" # choice: ["DBSCAN", AgglomerativeClustering]
+- "Возраст"
+- "Баллы, %"
+output_file: "clustered_data/clustered.csv"
 
+# choice: ["DBSCAN", "AgglomerativeClustering", "kmeans"]
+cluster_method: "kmeans"
+
+# save elbow plot for kmeans method (if you want)
+is_save_elbow_plot: False
+save_elbow_plot_path: "elbow_plot.png"
 
 # Cluster params
+
 ## DBSCAN
 eps: 0.3
 min_samples: 20
 
-# cluster Ward
-n_clusters: 6
+## for AgglomerativeClustering or KMeans
+n_clusters: 4
