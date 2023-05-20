@@ -5,6 +5,7 @@ from sklearn.cluster import DBSCAN
 from sklearn.metrics import silhouette_score, davies_bouldin_score
 
 from utils.column_processing_category import get_category
+from utils.gusev_processing_category import gusev_get_category
 
 CONFIG_PATH = "/Users/karenkocharyan/PycharmProjects/energoose_dashboard/configs/cluster_config.yaml"
 
@@ -36,6 +37,7 @@ def save_cluster_labels(data, cluster_labels, output_file):
 def main(config):
     data = load_data(config['input_file'])
     data = get_category(data)
+    data = gusev_get_category(data)
     categorical_data = data[config['categorical_columns']]
     numerical_data = data[config['numeric_columns']]
 
