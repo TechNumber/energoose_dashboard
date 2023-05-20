@@ -52,8 +52,8 @@ def main(config):
     silhouette = silhouette_score(processed_data, cluster_labels)
     davies_bouldin = davies_bouldin_score(processed_data, cluster_labels)
 
-    print("Silhouette Score:", silhouette)
-    print("Davies-Bouldin Index:", davies_bouldin)
+    print(f"Silhouette Score: {silhouette}")
+    print(f"Davies-Bouldin Index: {davies_bouldin}")
     print(f"Cluster data saved to: {config['output_file']}")
 
 
