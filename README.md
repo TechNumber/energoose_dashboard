@@ -10,7 +10,7 @@ Link to dashboard: https://datalens.yandex/5olr3586ak26v
 2. cd energoose_dashboard
 3. pip install -r requirements.txt
 
-## Running the script
+## Running the scripts
 
 To use the clustering script, run the following command:
 
@@ -23,7 +23,7 @@ To use the processing workplaces parser, run the following command:
 python processing_workplaces.py
 ```
 
-### Running dashboard
+## Running dashboard
 To run dashboard, you should run the following command:
 ```console
 python run_dashboard.py
