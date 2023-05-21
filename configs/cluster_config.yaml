@@ -23,3 +23,7 @@ min_samples: 20
 
 ## for AgglomerativeClustering or KMeans
 n_clusters: 4
+
+
+# Processing workplaces
+workplace_output: 'data/participants_parsed.csv'
