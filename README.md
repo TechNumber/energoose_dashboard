@@ -1,6 +1,6 @@
-# TODO: Header
+# Clustering of hackathon participants
 
-TODO: Description
+The project is designed for clustering hackathon participants and subsequent analytics using a dashboard
 
 ## Installation
 
@@ -40,7 +40,7 @@ You should to go to the following link http://127.0.0.1:8050/ and then you will 
 To use the clustering method for specified data, you should open configs/cluster_config.yaml and change params for your case:
 
 - input_file (str): path to the input csv file
-- path_to_csv_files (str): path to the csvs files which you want merge with member csv
+- path_to_csv_files (str): path to the csvs files which you want merge with participants csv
 - categorical_columns (list of str): categorical columns that you want to use for clustering
 - numeric_columns (list of str): numeric columns that you want to use for clustering
 - output_file (str): path to the output csv file with clustering and all preprocessing
@@ -65,7 +65,7 @@ To use the clustering method for specified data, you should open configs/cluster
     └── preprocessing  # Folder for storage preprocessing scripts
         ├── column_processing_ages.py  # Script for preprocessing ages columns
         ├── column_processing_category.py  # Script for preprocessing category columns
-        ├── merge_tables.py  # Script for merge csvs in anonimized folder with members csv
+        ├── merge_tables.py  # Script for merge csvs in anonimized folder with participants csv
         ├── preprocess_functioncs.py  # Script which run all our preprocessing scripts for specified data
         ├── processing_interval_groups.py  # Script for processing some columns to group category
         └── processing_workplaces.py  # Script for processing workplace column
