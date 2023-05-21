@@ -23,21 +23,6 @@ To use the processing workplaces parser, run the following command:
 python processing_workplaces.py
 ```
 
-## Running dashboard
-To run dashboard, you should run the following command:
-```console
-python run_dashboard.py
-```
-
-You see this in terminal:
-```console
-Dash is running on http://127.0.0.1:8050/
-
- * Serving Flask app 'run_dashboard'
- * Debug mode: on
-```
-You should to go to the following link http://127.0.0.1:8050/ and then you will see the dashboard running
-
 ## Usage
 To use the clustering method for specified data, you should open configs/cluster_config.yaml and change params for your case:
 
@@ -72,3 +57,29 @@ To use the clustering method for specified data, you should open configs/cluster
         ├── processing_interval_groups.py  # Script for processing some columns to group category
         └── processing_workplaces.py  # Script for processing workplace column
 ```
+
+## Running dashboard
+To run dashboard, you should run the following command:
+```console
+python run_dashboard.py
+```
+
+You see this in terminal:
+```console
+Dash is running on http://127.0.0.1:8050/
+
+ * Serving Flask app 'run_dashboard'
+ * Debug mode: on
+```
+You should to go to the following link http://127.0.0.1:8050/ and then you will see the dashboard running
+
+## Example of a plotly dashboard below:
+![Screenshot](images/plotly_dashboard.png)
+
+## Examples of what a dashboard looks like in **datalens** below:
+
+![Screenshot](images/dash_1.png)
+
+![Screenshot](images/dash_2.png)
+
+![Screenshot](images/dash_3.png)
