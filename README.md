@@ -2,7 +2,7 @@
 
 The project is designed for clustering championship participants and subsequent analytics using a dashboard
 
-Link to dashboard: https://datalens.yandex/5olr3586ak26v
+Link to dashboard: https://datalens.yandex/k33djdvqc8aoa
 
 ## Installation
 
