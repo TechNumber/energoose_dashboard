@@ -11,10 +11,6 @@ output_file: "clustered_data/clustered.csv"
 # choice: ["DBSCAN", "AgglomerativeClustering", "kmeans"]
 cluster_method: "kmeans"
 
-# save elbow plot for kmeans method (if you want)
-is_save_elbow_plot: False
-save_elbow_plot_path: "elbow_plot.png"
-
 # Cluster params
 
 ## DBSCAN
