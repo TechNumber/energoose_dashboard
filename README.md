@@ -73,7 +73,7 @@ Dash is running on http://127.0.0.1:8050/
 ```
 You should to go to the following link http://127.0.0.1:8050/ and then you will see the dashboard running
 
-## Example of a **plotly** dashboard below:
+## Example of a plotly dashboard below:
 ![Screenshot](images/plotly_dashboard.png)
 
 ## Examples of what a dashboard looks like in **datalens** below:
