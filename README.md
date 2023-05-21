@@ -21,7 +21,20 @@ To use the processing workplaces parser, run the following command:
 python processing_workplaces.py
 ```
 
+### Running dashboard
+To run dashboard, you should run the following command:
+```console
+python run_dashboard.py
+```
 
+You see this in terminal:
+```console
+Dash is running on http://127.0.0.1:8050/
+
+ * Serving Flask app 'run_dashboard'
+ * Debug mode: on
+```
+You should to go to the following link http://127.0.0.1:8050/ and then you will see the dashboard running
 
 ## Usage
 To use the clustering method for specified data, you should open configs/cluster_config.yaml and change params for your case:
@@ -45,6 +58,7 @@ To use the clustering method for specified data, you should open configs/cluster
 │   ├── anonimized
 │   └── Участники anonimized.csv
 ├── run_clustering.py  # Script for run clustering preprocessed data and save final file in csv
+├── run_dashboard.py  # Script for run dashboard
 ├── requirements.txt
 └── utils
     ├── clustering.py  # Script for init cluster method and make cluster predict
