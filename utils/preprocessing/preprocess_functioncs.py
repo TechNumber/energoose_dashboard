@@ -2,10 +2,10 @@ import pandas as pd
 
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import MinMaxScaler
-from utils.column_processing_category import get_category
-from utils.column_processing_ages import gusev_get_category
-from utils.merge_tables import merge_scores
-from utils.processing_interval_groups import get_interval_groups
+from utils.preprocessing.column_processing_category import get_category
+from utils.preprocessing.column_processing_ages import gusev_get_category
+from utils.preprocessing.merge_tables import merge_scores
+from utils.preprocessing.processing_interval_groups import get_interval_groups
 
 
 def load_data(file_path):

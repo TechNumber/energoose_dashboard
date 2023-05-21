@@ -2,7 +2,7 @@ import yaml
 import numpy as np
 
 from utils.clustering import perform_clustering
-from utils.preprocess_functioncs import *
+from utils.preprocessing.preprocess_functioncs import *
 
 CONFIG_PATH = "configs/cluster_config.yaml"
 
