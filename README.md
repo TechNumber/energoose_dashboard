@@ -24,8 +24,7 @@ python processing_workplaces.py
 
 
 ## Usage
-To use the clustering method for specified data, you should open configs/cluster_config.yaml and 
-you should change params for your case:
+To use the clustering method for specified data, you should open configs/cluster_config.yaml and change params for your case:
 
 - input_file (str): path to the input csv file
 - path_to_csv_files (str): path to the csvs files which you want merge with member csv
