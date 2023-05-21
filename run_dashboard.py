@@ -78,7 +78,7 @@ def filter_paste(filter):
 app.layout = dbc.Container(
     [
         html.H4(
-            "Интерактивный дэщборд чемпионата AtomSkills",
+            "Интерактивный дэшборд чемпионата AtomSkills",
             style={"textAlign": "center"},
             className="mb-3",
         ),
