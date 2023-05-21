@@ -189,4 +189,4 @@ def update_content(filter1, filter2, tab):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=False, port=8943)
+    app.run_server(debug=False, port=8050)
